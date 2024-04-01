@@ -154,4 +154,8 @@ document.getElementById("image").onchange = (e) => {
 // Initialize the form display
 showCraftForm();
 document.getElementById("add-craft-form").onsubmit = addCraft;
-document.getElementById("cancel").onclick = resetForm; 
+document.getElementById("cancel").onclick = () => {
+    resetForm();
+    document.getElementById("dialog").style.display = "none";
+};
+
